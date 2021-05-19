@@ -15,7 +15,7 @@ def talk_to_me(update, context):
 
 
 def main():
-    mybot = Updater("1821534636:AAEKvBxLcLWqcIFumD9wPpfhTFc9Oe5jQsY", use_context=True)
+    mybot = Updater(setting.API_KEY, use_context=True)
     
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
@@ -25,4 +25,5 @@ def main():
     mybot.start_polling()
     mybot.idle()
 
-main()
+if __name__ == "__main__":
+    main()
